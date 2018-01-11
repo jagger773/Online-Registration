@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="shortcut icon" href="static/favicon.ico">
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url_for('static', filename='style_vision.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url_for('static', filename='style_print.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url_for('static', filename='font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <!-- Custom styles for this template -->
+   <link href="{{url_for('static', filename='clean-blog.min.css')}}" rel="stylesheet">
+
+    <script type="text/javascript" src="static/js/app/build/signup61de.js?v=5f991ad157a3fff19c56aa74dc205272ad0219e3" data-main="signup"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: grey">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Online appointment</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Домой</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Записаться к врачу</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Справочник учреждений</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Войти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div id="wrapper">
+              <div id="content">
+                <h1>Свободная запись к врачу</h1>
+        
+
+<div class="md_step visible" id="step_district_select">
+
+  <div class="md_step_header">
+    <span class="chosen_item"></span>
+    <a href="#" class="step_back">Выбрать другой район</a>
+  </div>
+
+  <div class="md_box" data-view="DistrictFormView">
+
+    <div class="district_box">
+      <div>
+        <span class="hint rounded">
+              
+                  Выберите район города, где доступна электронная запись.<br />
+          Учреждения, предназначенные для записи, указаны на вашем полисе медицинского страхования или на прилагающейся памятке.
+              
+        </span>
+      </div>
+
+      <span class="error hint rounded" style="display: none;">
+        Не найдено ни одного района
+      </span>
+
+      <ul id="district_list">
+        <li class="empty_elem" data-id=""></li>
+        
+          <li data-id="1" onclick="">Свердловский</li>
+        
+          <li data-id="2" onclick="">Октябрский</li>
+        
+          <li data-id="3" onclick="">Ленинский</li>
+        
+          <li data-id="4" onclick="">Первомайский</li>
+        
+          <li data-id="5" onclick="">город Сокулук</li>
+        
+      </ul>
+
+      <div class="district_map">
+  <div class="d1"></div>
+  <div class="d2"></div>
+  <div class="d3"></div>
+  <div class="d4"></div>
+  <div class="d5"></div>
+  <div class="d6"></div>
+  <div class="d7"></div>
+  <div class="d8"></div>
+  <div class="d9"></div>
+  <div class="d10"></div>
+  <div class="d11"></div>
+  <div class="d12"></div>
+  <div class="d13"></div>
+  <div class="d14"></div>
+  <div class="d15"></div>
+  <div class="d16"></div>
+  <div class="d17"></div>
+  <div class="d18"></div>
+  <div class="d19"></div>
+  <div class="d20"></div>
+  <div class="d21"></div>
+  <div class="d22"></div>
+  <div class="d23"></div>
+</div>
+
+    </div>
+
+    
+      <form method="post" action="https://gorzdrav.spb.ru/api/clinic_list/">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+        <input class="jq_input_district_id jq_input_flush" id="id_district_form-district_id" name="district_form-district_id" type="hidden" />
+      </form>
+    
+
+    
+  </div>
+
+  
+
+
+<div class="md_step" id="step_clinic_select">
+
+  <div class="md_step_header">
+    <span class="chosen_item"></span>
+    <a href="#" class="step_back">Выбрать другое учреждение</a>
+  </div>
+
+  <div class="md_box" data-view="ClinicFormView">
+    <span class="hint rounded" style="display: none;">Выберите медицинское учреждение</span>
+    <span class="error hint rounded" style="display: none;"></span>
+
+    <ul id="clinic_list" class="list_elem">
+      <li class="empty_elem" data-id="" data-email="" data-address="" onclick="">
+                <span class="clinic_name"></span>
+                <span class="clinic_address"></span>
+            </li>
+    </ul>
+
+    
+      <form method="post" action="https://gorzdrav.spb.ru/api/check_clinic/">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+        <input class="jq_input_clinic_id jq_input_flush" id="id_clinic_form-clinic_id" name="clinic_form-clinic_id" type="hidden" />
+        <input class="jq_input_patient_id jq_input_flush" id="id_clinic_form-patient_id" name="clinic_form-patient_id" type="hidden" />
+        <input class="jq_input_history_id jq_input_flush" id="id_clinic_form-history_id" name="clinic_form-history_id" type="hidden" />
+      </form>
+    
+  </div>
+
+  
+
+
+
+<div class="md_step" id="step_speciality_select">
+
+  <div class="md_step_header">
+    <span class="chosen_item"></span>
+    <a href="#" class="step_back">Выбрать другую специальность</a>
+  </div>
+
+  <div class="md_box" data-view="SpecialityFormView">
+    
+
+    <span class="additional_info" style="display: none;"></span>
+    <span class="hint rounded" style="display: none;">Выберите специализацию врача</span>
+    <span class="error hint rounded" style="display: none;"></span>
+
+    <ul id="speciality_list" class="list_elem">
+      <li class="empty_elem" data-id="" onclick=""></li>
+    </ul>
+
+    
+      <form method="post" action="https://gorzdrav.spb.ru/api/doctor_list/">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+        <input class="jq_input_speciality_id jq_input_flush" id="id_speciality_form-speciality_id" name="speciality_form-speciality_id" type="hidden" />
+        <input class="jq_input_clinic_id" id="id_speciality_form-clinic_id" name="speciality_form-clinic_id" type="hidden" />
+        <input class="jq_input_patient_id" id="id_speciality_form-patient_id" name="speciality_form-patient_id" type="hidden" />
+        <input class="jq_input_history_id jq_input_flush" id="id_speciality_form-history_id" name="speciality_form-history_id" type="hidden" />
+      </form>
+    
+  </div>
+
+  
+
+
+
+<div class="md_step" id="step_doctor_select">
+
+  <div class="md_step_header">
+    <span class="chosen_item"></span>
+    <a href="#" class="step_back">Выбрать другого врача</a>
+  </div>
+
+  <div class="md_box" data-view="DoctorFormView" >
+    
+<div class="loader">
+  <p>
+    <span>Загрузка...</span>
+  </p>
+  <img src="../../static/img/ajax-loader.gif" />
+</div>
+
+
+    
+
+    <span class="hint rounded" style="display: none;">Выберите врача</span>
+    <span class="error hint rounded" style="display: none;"></span>
+        
+                <button id="switchWTbtn" onclick="switchWT()"><span id="switchWTlbl">показать</span> режим работы врачей</button>
+        
+    <div>
+      <span class="patient-aria rounded" id="patientAriaNumber"></span>
+    </div>
+
+    <ul id="doctor_list" class="list_elem">
+      <li class="empty_elem" onclick="">
+                <span class="doctor_list_info"></span>
+                <span class="doctor_worktime"></span>
+            </li>
+    </ul>
+
+    
+      <form method="post" action="https://gorzdrav.spb.ru/api/appointment_list/">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+        <input class="jq_input_doctor_id jq_input_flush" id="id_doctor_form-doctor_id" name="doctor_form-doctor_id" type="hidden" />
+        <input class="jq_input_clinic_id" id="id_doctor_form-clinic_id" name="doctor_form-clinic_id" type="hidden" />
+        <input class="jq_input_patient_id" id="id_doctor_form-patient_id" name="doctor_form-patient_id" type="hidden" />
+        
+        
+        <input class="jq_input_history_id jq_input_flush" id="id_doctor_form-history_id" name="doctor_form-history_id" type="hidden" />
+        <input class="jq_input_appointment_type" id="id_doctor_form-appointment_type" name="doctor_form-appointment_type" type="hidden" />
+      </form>
+    
+  </div>
+
+  
+
+
+
+<div class="md_step" id="step_appointment_select">
+
+  <div class="md_step_header">
+    <span class="chosen_item"></span>
+    <a href="#" class="step_back">Выбрать другое время</a>
+  </div>
+
+  <div class="md_box" data-view="AppointmentSelectFormView">
+    
+
+    <span class="hint rounded" style="display: none;">Выберите время приёма</span>
+    <span class="error hint rounded" style="display: none;"></span>
+
+    <div class="buttons">
+      <span class="next">Следующая неделя</span>
+      <span class="prev">Предыдущая неделя</span>
+    </div>
+
+
+    <div id="select_time_alt">
+      <div id="datepicker"></div>
+
+      <div id="timepicker">
+        <span class="timepicker_error_message" style="display: none;">Для выбранного дня нет свободных талонов</span>
+        <ul class="empty_elem list_elem_removeable day" data-year="" data-month="" data-day="">
+          <li class="empty_elem active" data-id="">
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+    
+
+
+<div class="md_step" id="step_patient_check">
+
+    <div class="md_step_header">
+        <span class="chosen_item"></span>
+        <a href="#" class="step_back">Указать другие данные</a>
+    </div>
+
+    <div class="md_box" data-view="PatientCheckView" >
+        <span class="error hint rounded" style="display:none"></span>
+        <form method="post" action="https://gorzdrav.spb.ru/api/check_patient/" id="patient_form">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+            <input class="jq_input_clinic_id" id="id_patient_form-clinic_id" name="patient_form-clinic_id" type="hidden" />
+            <input class="jq_input_patient_birthday jq_input_flush" id="id_patient_form-birthday" name="patient_form-birthday" type="hidden" />
+
+            <div class="patient_form">
+                <div class="info">
+                    <div class="notice rounded">Внимание! Нажимая кнопку "Далее",<br>вы подтверждаете свое согласие на
+                        передачу и обработку персональных данных (имя, отчество, фамилия, дата рождения) в соответствии
+                        с п.4 ст. 9 Федерального закона № 152-ФЗ.
+                    </div>
+                    <div class="error rounded" style="display: none;"></div>
+
+                </div>
+
+                <span class="hint rounded" style="display: none;">Укажите Ваши личные данные</span>
+                <span class="erroneous hint rounded error" style="display: none;"></span>
+
+                <table>
+                    <tr>
+                        <td>
+                            <label>Фамилия</label>
+                            <input class="jq_input_patient_last_name textfield rounded jq_input jq_input_flush"
+                                   id="id_patient_form-last_name" name="patient_form-last_name" placeholder="Фамилия"
+                                   type="text"
+                                   value="">
+                            <em class="arrow"></em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Имя</label>
+                            <input class="jq_input_patient_first_name textfield rounded jq_input jq_input_flush"
+                                   id="id_patient_form-first_name" name="patient_form-first_name" placeholder="Имя"
+                                   type="text"
+                                   value="">
+                            <em class="arrow"></em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Дата рождения</label>
+                            
+<div class="datepicker">
+  <ul class="month_popup rounded">
+    <li data-id="0" >Январь</li>
+    <li data-id="1" >Февраль</li>
+    <li data-id="2" >Март</li>
+    <li data-id="3" >Апрель</li>
+    <li data-id="4" >Май</li>
+    <li data-id="5" >Июнь</li>
+    <li data-id="6" >Июль</li>
+    <li data-id="7" >Август</li>
+    <li data-id="8" >Сентябрь</li>
+    <li data-id="9" >Октябрь</li>
+    <li data-id="10" >Ноябрь</li>
+    <li data-id="11" >Декабрь</li>
+  </ul>
+  <input type="text" class="textfield rounded jq_input_day jq_dateinput jq_input_flush" placeholder="День" maxlength="2" value="" />
+  <input type="text" class="textfield rounded jq_input_month_verbose jq_dateinput jq_input_flush" placeholder="Месяц" value="" />
+  <input type="text" class="textfield rounded jq_input_year jq_dateinput jq_input_flush" placeholder="Год" maxlength="4" value="" />
+    
+        <input type="hidden" class="jq_input_month_actual jq_dateinput jq_input_flush"/>
+    
+
+</div>
+
+                        </td>
+                    </tr>
+                    
+                    
+                        <tr>
+                            <td>
+                                <label>E-mail</label>
+                                <input class="jq_input_patient_email textfield rounded jq_input jq_input_flush"
+                                       id="id_patient_form-email" name="patient_form-email " placeholder="E-mail"
+                                       type="email"
+                                       value="">
+                                <em class="arrow"></em>
+                                <span class="helptext">Поле необязательно для заполнения</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Телефон</label>
+                                <input class="jq_input_patient_phone textfield rounded jq_input jq_input_flush"
+                                       id="id_patient_form-phone" name="patient_form-phone" placeholder="+7(000)000-00-00"
+                                       type="tel"
+                                       value="">
+                                <em class="arrow"></em>
+                                <span class="helptext">Поле необязательно для заполнения</span>
+                            </td>
+                        </tr>
+                    
+
+                    <tr style="display:none;">
+                        <td>
+                            <label>Отчество</label>
+                            <input class="jq_input_patient_middle_name textfield rounded jq_input jq_input_flush" id="id_patient_form-middle_name" name="patient_form-middle_name" placeholder="Отчество" type="text" />
+                            <em class="arrow"></em>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="submit next">
+          <span class="button dis">
+                        
+                            <input type="submit" value="Далее" disabled="disabled"/>
+                        
+          </span>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    
+        
+
+
+<div class="md_step" id="step_signup_validate">
+
+    <div class="md_box" data-view="SingUpValidateFormView">
+        <span class="error hint rounded" style="display: none;"></span>
+
+        <div class="validate_info">
+            <p>
+                <strong>
+                    <span><span class="jq_patient_last_name"></span></span>
+                    <span><span class="jq_patient_first_name"></span></span>
+                    <span><span class="jq_patient_middle_name"></span></span>,
+                </strong>
+                <span><span class="jq_patient_verbose_birthday"></span> г.р.</span>
+            </p>
+            <br/>
+            <p>Запись на приём <span class="jq_appointment_name jq_info"></span></p>
+            <p><span class="jq_speciality_name"></span>: <strong><span class="jq_doctor_name"></span></strong></p>
+            <p><span class="jq_clinic_name"></span></p>
+            <p><span class="jq_clinic_address"></span></p>
+            <p><span class="jq_clinic_phone"></span></p>
+        </div>
+
+        
+            <form method="post" action="https://gorzdrav.spb.ru/api/signup/" id="appointment_form" class="jq_pure_form">
+                <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+                <input class="jq_input_appointment_id jq_input_flush" id="id_appointment_form-appointment_id" name="appointment_form-appointment_id" type="hidden" />
+                <input class="jq_input_patient_id" id="id_appointment_form-patient_id" name="appointment_form-patient_id" type="hidden" />
+                <input class="jq_input_clinic_id" id="id_appointment_form-clinic_id" name="appointment_form-clinic_id" type="hidden" />
+                <input class="jq_input_referral_id" id="id_appointment_form-referral_id" name="appointment_form-referral_id" type="hidden" />
+                <input class="jq_input_history_id" id="id_appointment_form-history_id" name="appointment_form-history_id" type="hidden" />
+                <div class="form-checkbox">
+
+
+                    <label for="id_check_1">
+                        <input type="checkbox" name="check_1" id="id_check_1">
+                        Я проинформирован о необходимости отменить данную запись в случае невозможности явиться на
+                        прием. В противном случае дальнейшая запись через Интернет для меня может быть ограничена.
+                    </label>
+                </div>
+                <div class="form-checkbox">
+
+                    <label for="id_check_2">
+                        <input type="checkbox" name="check_2" id="id_check_2">
+                        Я даю согласие на обработку своих персональных данных в соответствии с требованиями Федерального
+                        закона №152-ФЗ от 27.07.2006.
+                    </label>
+                </div>
+
+
+                <div class="submit next inline">
+          <span class="button dis" style="width:170px;">
+            <input id="signup_sub" type="submit" value="Записаться" style="width:170px;">
+          </span>
+                    &nbsp; или &nbsp;
+                    <a href="#" class="signup-cancel">Отменить</a>
+                </div>
+            </form>
+        
+    </div>
+
+    
+
+
+
+<div id="step_signup_success" class="md_step success">
+  
+    <span class="hint rounded">
+        Вы успешно записаны на прием к врачу. Теперь вы должны получить <br>статистический талон в регистратуре и предъявить его врачу на приеме.
+    </span>
+
+  <div class="sms-box">
+    <div class="qr-code">
+      <img src="#" />
+    </div>
+
+    
+  </div>
+
+  <div class="complete">
+    <h1></h1>
+    <span><span class="jq_patient_last_name"></span></span>
+    <span><span class="jq_patient_first_name"></span></span>
+    <span><span class="jq_patient_middle_name"></span></span>,
+    <span><span class="jq_patient_verbose_birthday"></span> г.р.</span>
+    <br />
+    Запись на приём <span class="jq_appointment_name jq_info"></span> <br />
+    <span class="jq_speciality_name"></span>: <strong><span class="jq_doctor_name"></span></strong><br />
+    <span class="jq_clinic_name"></span>, <span class="jq_district_name"></span>&nbsp р-н <br />
+    Номер талона: <span class="jq_appointment_id"></span>
+  </div>
+
+  <div class="complete btns">
+    <span class="jq_print_ticket"><input type="button" class="link" value="Распечатать талон"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <form action="https://gorzdrav.spb.ru/signup/export/pdf/" method="post" class="jq_pure_form">
+      <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+      <input class="jq_input_patient_first_name" id="id_pdf_form-patient_first_name" name="pdf_form-patient_first_name" type="hidden" />
+      <input class="jq_input_patient_last_name" id="id_pdf_form-patient_last_name" name="pdf_form-patient_last_name" type="hidden" />
+      <input class="jq_input_patient_middle_name" id="id_pdf_form-patient_middle_name" name="pdf_form-patient_middle_name" type="hidden" />
+      <input class="jq_input_patient_birthday" id="id_pdf_form-patient_birthday" name="pdf_form-patient_birthday" type="hidden" />
+      <input class="jq_input_doctor_name" id="id_pdf_form-doctor_name" name="pdf_form-doctor_name" type="hidden" />
+      <input class="jq_input_clinic_name" id="id_pdf_form-clinic_name" name="pdf_form-clinic_name" type="hidden" />
+      <input class="jq_input_clinic_address" id="id_pdf_form-clinic_address" name="pdf_form-clinic_address" type="hidden" />
+      <input class="jq_input_clinic_phone" id="id_pdf_form-clinic_phone" name="pdf_form-clinic_phone" type="hidden" />
+      <input class="jq_input_district_name" id="id_pdf_form-district_name" name="pdf_form-district_name" type="hidden" />
+      <input class="jq_input_appointment_id" id="id_pdf_form-appointment_id" name="pdf_form-appointment_id" type="hidden" />
+      <input class="jq_input_speciality_name" id="id_pdf_form-speciality_name" name="pdf_form-speciality_name" type="hidden" />
+      <input class="jq_input_appointment_start" id="id_pdf_form-appointment_start" name="pdf_form-appointment_start" type="hidden" />
+      <input class="jq_input_appointment_end" id="id_pdf_form-appointment_end" name="pdf_form-appointment_end" type="hidden" />
+      <input type="submit" class="link" value="Сохранить в PDF" />
+    </form>
+  </div>
+
+  <!--<p>
+    Если у вас нет возможности распечатать талон самостоятельно, вам поможет <br>
+    регистрарура или инфокиоск. Для этого вам нужно сообщить номер талона <br>
+    работнику регистратуры или воcпользоваться услугой печати талона в инфокиоске.
+  </p>-->
+
+  <div class="print-view">
+
+
+    <div class="ticket">
+      <div class="code-39">
+        <img src="#" />
+      </div>
+
+      <div>
+        Пациент:
+        <span>&nbsp;<span class="jq_patient_last_name"></span></span>
+        <span>&nbsp;<span class="jq_patient_first_name"></span></span>
+        <span>&nbsp;<span class="jq_patient_middle_name"></span></span>,
+        <span><span class="jq_patient_verbose_birthday"></span> г.р.</span>
+        <br />
+        <br />
+        Запись на приём <span class="jq_appointment_name jq_info"></span><br />
+        <span class="jq_speciality_name"></span>: <strong><span class="jq_doctor_name"></span></strong><br />
+        <span class="jq_clinic_name"></span><span class="jq_clinic_address"></span><br />
+        <span class="jq_clinic_phone"></span><br />
+        <br />
+        Номер талона: <span class="jq_appointment_id jq_info"></span><br />
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    
+</div>
+
+  
+</div>
+
+</div>
+
+<script language="javascript">
+function switchWT() {
+        wt = document.getElementsByClassName('workingTime');
+
+        for (i=0;i<wt.length;i++){
+                wt[i].style.display = wt[i].style.display == 'block' ? 'none' : 'block';
+        }
+
+        document.getElementById('switchWTlbl').innerText = document.getElementById('switchWTlbl').innerText == 'показать' ? 'скрыть' : 'показать';
+}
+</script>
+
+</div>
+
+</div>
+
+</div>
+
+        <div id="step_dump"></div>
+    </div>
+
+    <!-- /content -->
+
+    <div id="empty"></div>
+</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+
+
+
+    <!-- Custom scripts for this template -->
+    <script src="{{url_for('static', filename='clean-blog.min.js')}}"></script>
+    <div class="counters" style="display: none;">
+
+
+
+</div>
+
+  </body>
+
+</html>

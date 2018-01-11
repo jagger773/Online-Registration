@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+    <!--React LINKS -->
+    <link rel="manifest" href="/build/manifest.json">
+    <link rel="shortcut icon" href="/build/favicon.ico">
+    <link href="/build/static/css/main.ed1f3e4a.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{url_for('static', filename='font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='clean-blog.min.css')}}" rel="stylesheet">
+
+    <script type="text/javascript" src="static/js/app/build/signup61de.js?v=5f991ad157a3fff19c56aa74dc205272ad0219e3" data-main="signup"></script>
+
+
+     <script src="static/js/jquery.1.6.4.min.js"></script>
+        <script src="static/js/jquery-ui.1.8.16.min.js"></script>
+
+        <script src="static/js/site-base.js"></script>
+        <script src="static/js/post-doctors.js"></script>
+        <script src="static/js/vision-events.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                document.cookie = 'csrftoken=qxlfPrzK6EBgwOaMbJkceiXpDoc101nK'
+            });
+        </script>
+        
+  <script src="static/js/paginate.js"></script>
+  <script src="static/js/reference.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: grey">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Online appointment</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Домой</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Записаться к врачу</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Справочник учреждений</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Войти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Справочник медицинских учреждений Бишкека</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+  <div id="content" class="reference-content">
+    <h1>Справочник медицинских учреждений Бишкека</h1>
+
+    <ul class="catalog-menu">
+      <li class="cur">Списком</li>
+    </ul>
+
+    <div class="catalog-left">
+
+      <div class="catalog-filter">
+        <form action="https://gorzdrav.spb.ru/api/clinic_reference_list/" method="post">
+          <input type='hidden' name='csrfmiddlewaretoken' value='qxlfPrzK6EBgwOaMbJkceiXpDoc101nK' />
+          Район
+          <select id="id_clinic_filter_form-district_id" name="clinic_filter_form-district_id">
+<option value="" selected="selected">Любой</option>
+<option value="1">Свердловский</option>
+<option value="2">Ленинский</option>
+<option value="3">Первомайский</option>
+<option value="4">Октябрский</option>
+</select>
+          
+
+          <div>
+            <label>Поиск</label>
+                        <input class="fld" id="id_clinic_filter_form-clinic_name" name="clinic_filter_form-clinic_name" type="text" />
+            <input type="submit" class="btn">
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="catalog-right">
+
+      <div class="loader">
+        <p>
+          <span>Загрузка...</span>
+        </p>
+        <img src="../../static/img/ajax-loader.gif" />
+      </div>
+
+      <span class="error hint rounded" style="display: none;"></span>
+
+      <div id="cat">
+        <ol class="clinic_list lpu-list">
+          <li class="lpu-item empty_elem">
+            <h3><span class="clinic_name"></span></h3>
+            <p><span class="clinic_address"></span></p>
+            <p><span>Телефон: 8 <span class="clinic_phone"></span></span></p>
+            <p>Часы работы: <span class="clinic_open_hours"></span></p>
+            <p>Электронная почта: <span class="clinic_email"></span></p>
+          </li>
+
+            <li class="lpu-item" style="display: none;">
+              <h3><span class="clinic_name">Для тестов</span></h3>
+
+              <p><span class="clinic_address">
+                
+                  Свердловский
+                
+                
+              </span></p>
+            </li>
+          
+            <li class="lpu-item" style="display: none;">
+              <h3><span class="clinic_name">Городская поликлиника №9&quot;</span></h3>
+
+              <p><span class="clinic_address">
+                
+                  Свердловкий, 
+                
+                
+                   Бишкек, ул. Салиева, д. 4
+                
+              </span></p>
+
+              
+                <p>Телефон: 8 <span class="clinic_phone">(996) 705-809-805</span></p>
+              
+
+              
+
+              
+                <p>Электронная почта: <span class="clinic_email">jtsmcb@gmail.com</span></p>
+              
+
+            </li>
+          
+        </ol>
+      </div>
+
+    </div>
+  </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+
+
+
+    <!-- Custom scripts for this template -->
+    <script src="{{url_for('static', filename='clean-blog.min.js')}}"></script>
+
+  </body>
+
+</div>
+
+</html>
