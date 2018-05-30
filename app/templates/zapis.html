@@ -1,0 +1,53 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+Запись к врачу {% endblock %}
+{% block styles %}
+{{ super() }}
+    <link href="{{url_for('static', filename='css/demo.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url_for('static', filename='css/animate-custom.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+
+           <div class="container">
+
+            <div class="codrops-top">
+
+                <span class="right">
+
+                </span>
+
+            </div>
+            <header>
+                <h1>Запись к врачу</h1>
+
+            </header>
+            <section>
+                <div id="container_demo" >
+
+
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+    <form class="uname" method="POST", action="/zapis">
+    {{ forms.csrf_token }}
+    <p>{{ forms.district_name.label }}
+        {{ forms.district_name }}
+    </p>
+    <p>{{ forms.hospital_name.label }}
+        {{ forms.hospital_name }}</p>
+        <p>{{ forms.department_name.label }}
+            {{ forms.department_name }}</p>
+        <p>{{ forms.doctors_name.label }}{{ forms.doctors_name }}</p>
+        <p>{{ forms.date.label }}{{ forms.date }}</p>
+    <p class="login button">
+    <input type="submit" value="Запись">
+    </p>
+    </form>
+             </div>
+                   </div>
+
+                    </div>
+
+            </section>
+        </div>
+{% endblock %}

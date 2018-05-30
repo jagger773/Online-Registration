@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Список Учреждений </title>
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
     <!--React LINKS -->
@@ -58,17 +58,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Домой</a>
+           <li class="nav-item">
+              <a class="nav-link" href={{ url_for('index') }}>Домой</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Записаться к врачу</a>
+              <a class="nav-link" href={{ url_for('index') }}>Запись к врачу</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Справочник учреждений</a>
+              <a class="nav-link" href={{ url_for('post') }}>Список учреждений</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Войти</a>
+
+                <li class="nav-item">
+              <a class="nav-link" href={{ url_for('signup') }}>Регистрация</a>
+            </li>
+                 <li class="nav-item">
+              <a class="nav-link" href={{ url_for('contact') }}>Войти</a>
             </li>
           </ul>
         </div>

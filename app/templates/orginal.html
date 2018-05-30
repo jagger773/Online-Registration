@@ -1,0 +1,38 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+    Запись к врачу
+{% endblock %}
+{% block styles %}
+{{ super() }}
+     <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="static/css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="static/css/switchery.min.css">
+  <script type="text/javascript" src="static/js/switchery.min.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div id="wrapper">
+    <h1> Запись к врачу</h1>
+  <form  method="POST", action="/orginal">
+   {{ form.csrf_token }}
+      <div class="col">
+   {{ form.district_name.label }}{{ form.district_name }}</div>
+      <div class="col">
+        {{ form.hospital_name.label }}{{ form.hospital_name }}</div>
+      <div class="col">
+        {{ form.department_name.label }}{{ form.department_name }}</div>
+      <div class="col">
+        {{ form.doctors_name.label }}{{ form.doctors_name }}</div>
+      <div class="col">
+        {{ form.date.label }}{{ form.date }}</div>
+      <div class="col-submit">
+  <button type="submit" class="submitbtn" ></button>
+      </div>
+  </form>
+    </div>
+
+  {% endblock %}

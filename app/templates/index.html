@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online doctor appointment </title>
+    <title>Запись к врачу </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
@@ -32,7 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="index.html">Запись к врачу</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -40,16 +40,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Домой</a>
+              <a class="nav-link" href={{ url_for('index') }}>Домой</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Запись к врачу</a>
+              <a class="nav-link" href={{ url_for('zapis') }}>Запись к врачу</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Список учреждений</a>
+              <a class="nav-link" href={{ url_for('post') }}>Список учреждений</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Войти</a>
+                <li class="nav-item">
+              <a class="nav-link" href={{ url_for('signup') }}>Регистрация</a>
+            </li>
+                 <li class="nav-item">
+              <a class="nav-link" href={{ url_for('contact') }}>Войти</a>
             </li>
           </ul>
         </div>
@@ -85,7 +88,7 @@
                 Здоровье города
               </h2>
               <p style="padding-bottom: 5px">
-                    <strong>Телефон 63-555-63</strong><br>
+                    <strong>Телефон 103</strong><br>
                     Городская круглосуточная справочная служба о медицинских услугах
                 </p>
             </a>
@@ -154,7 +157,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+            <p class="copyright text-muted"></p>
           </div>
         </div>
       </div>

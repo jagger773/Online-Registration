@@ -1,0 +1,74 @@
+
+{% extends "bootstrap/base.html" %}
+
+
+       {% block title %}Запись к врачу
+       {% endblock %}
+   {% block styles %}
+{{ super() }}
+       <link href="{{url_for('static', filename='css/demo.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{url_for('static', filename='css/animate-custom.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+  {% block content %}
+        <div class="container">
+
+            <div class="codrops-top">
+              
+                <span class="right">
+
+                </span>
+               
+            </div>
+            <header>
+                <h1>Запись к врачу</h1>
+			
+            </header>
+            <section>				
+                <div id="container_demo" >
+                   
+                    
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  > 
+                             
+                                <p> 
+                                    <label for="username" class="uname" > Район</label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="Выберите Район"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" >Больница </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="Выберите нужную Больницу" /> 
+                                </p>
+                                   <p> 
+                                    <label for="password" class="youpasswd" >Отделение </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="Выберите отделение" /> 
+                                </p>
+                                       <p> 
+                                    <label for="password" class="youpasswd" >Врач</label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="Выберите подходящего врача" /> 
+                                </p>
+                                   <p> 
+                                    <label for="password" class="youpasswd" >Время </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="Время" /> 
+                                </p>
+                             
+                             
+                             
+                             
+                                <p class="login button"> 
+                                    <input type="submit" value="Запись" /> 
+								</p>
+
+                                
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
+{% endblock %}

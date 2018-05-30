@@ -1,19 +1,21 @@
 <!DOCTYPE html>
+{%extends "bootstrap/base.html"%}
 <html lang="en">
-
+{% block head %}
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    {% block title %}
+   Online doctor appointment{% endblock %}
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap core CSS -->
+    {% block styles %}
+        {{ super() }}
     <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
+
     <link rel="shortcut icon" href="static/favicon.ico">
     <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css">
     <link href="{{url_for('static', filename='style_vision.css')}}" rel="stylesheet" type="text/css">
@@ -23,13 +25,15 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 
-    <!-- Custom styles for this template -->
+
    <link href="{{url_for('static', filename='clean-blog.min.css')}}" rel="stylesheet">
-
+    {% endblock %}
+  {% block scripts %}
     <script type="text/javascript" src="static/js/app/build/signup61de.js?v=5f991ad157a3fff19c56aa74dc205272ad0219e3" data-main="signup"></script>
-
+    {{ super() }}
+  {% endblock %}   }
   </head>
-
+{% endblock %}
   <body>
 
     <!-- Navigation -->
@@ -42,17 +46,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Домой</a>
+         <li class="nav-item">
+              <a class="nav-link" href={{ url_for('index') }}>Домой</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Записаться к врачу</a>
+              <a class="nav-link" href={{ url_for('zapis') }}>Запись к врачу</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Справочник учреждений</a>
+              <a class="nav-link" href={{ url_for('post') }}>Список учреждений</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Войти</a>
+
+                <li class="nav-item">
+              <a class="nav-link" href={{ url_for('signup') }}>Регистрация</a>
+            </li>
+                  <li class="nav-item">
+              <a class="nav-link" href={{ url_for('contact') }}>Войти</a>
             </li>
           </ul>
         </div>
